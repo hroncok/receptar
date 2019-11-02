@@ -60,3 +60,5 @@ NAZVY_RECEPTU = [
 if len(sys.argv) == 2:
     print("Hledam recept obsahujici:", sys.argv[1])
     najdi_recept_podle_ingredience(sys.argv[1])
+else:
+    print("Nebol zadany ziaden argument")
