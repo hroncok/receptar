@@ -16,7 +16,7 @@ def nacti_recept(jmeno):
 
 
 NAZVY_RECEPTU = [
-    'placky-skubane.txt',
+    'chlebova_pochoutka.txt',
 ]
 
 
