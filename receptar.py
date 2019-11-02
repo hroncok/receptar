@@ -1,7 +1,6 @@
 #!/usr/bin/env python
-# -*- coding: utf-8 -*- 
 import os.path
-
+import sys
 
 def je_ingredience_v_receptu(ingredience, recept):
     with open(recept) as fp:
@@ -17,7 +16,7 @@ def najdi_recept_podle_ingredience(ingredience):
     
     nalezene_recepty = []
     for f in os.listdir(adresar_receptu):
-        if je_ingredience_v_receptu(ingredience, adresar_receptu + '/' + f):
+        if je_ingredience_v_receptu(ingredience, os.path.join(adresar_receptu, f)):
             nalezene_recepty.append(f)
             
     if nalezene_recepty:
@@ -44,8 +43,6 @@ NAZVY_RECEPTU = [
     'chlebova_pochoutka.txt',
 ]
 
-
-# Máme zatím jen jeden recept, tak ho prostě ukážeme
-#print(nacti_recept(NAZVY_RECEPTU[0]))
-
-najdi_recept_podle_ingredience('vejce')
+if len(sys.argv) == 2:
+    print("Hledam recept obsahujici:", sys.argv[1])
+    najdi_recept_podle_ingredience(sys.argv[1])
