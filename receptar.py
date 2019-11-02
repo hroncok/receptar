@@ -1,4 +1,5 @@
 import os.path
+print("--- Ukáže nejlepší recept. ---")
 
 
 def nacti_recept(jmeno):
@@ -15,7 +16,7 @@ def nacti_recept(jmeno):
 
 
 NAZVY_RECEPTU = [
-    'chlebova_pochoutka.txt',
+    'placky-skubane.txt',
 ]
 
 
